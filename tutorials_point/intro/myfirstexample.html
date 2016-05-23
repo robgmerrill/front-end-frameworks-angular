@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular.min.js"></script>
+</head>
+<body ng-app="myapp">
+  <!-- View -->
+  <div ng-controller="HelloController">
+    <h2>Welcome {{helloTo.title}} to the world of Front End Frameworks!</h2>
+  </div>
+  
+  <script>
+  angular.module("myapp", [])
+    // Controller
+    // registers a controller function named HelloController
+    // in module named myapp.
+    // The controller function is registered in angular via the 
+    // angular.module(...).controller.funcion call.
+  .controller("HelloController", function($scope) {
+    $scope.helloTo = {};
+    $scope.helloTo.title = "AngularJS";
+  });
+  </script>
+
+</body>
+</html>
